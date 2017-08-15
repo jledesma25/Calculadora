@@ -19,18 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //2. Inicializamos las vistas
+        //1. Inicializamos las vistas
         inicializarVistas();
 
-
-
-        //4. Programamos la lógica de evento al presionar alguna opción
+        //2. Programamos la lógica de evento al presionar alguna opción
         iniciarEventos();
     }
 
     private void obtenerinputs() {
 
-        //3.1 Obtenemos los valores y parseamos de tipo string a tipo float
+        // Obtenemos los valores y parseamos de tipo string a tipo float
 
         n1 = Float.parseFloat(edt_n1.getText().toString());
         n2 = Float.parseFloat(edt_n2.getText().toString());
@@ -39,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void inicializarVistas() {
 
-        //4.1 Match entre los ids de la vistas y las varaibles
+        // Match entre los ids de la vistas y las varaibles
 
         edt_n1 = (EditText) findViewById(R.id.edt_n1);
         edt_n2 = (EditText) findViewById(R.id.edt_n2);
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void iniciarEventos() {
 
-        //5.1 Declaramos los eventos
+        // Declaramos los eventos
 
         btn_suma.setOnClickListener(this);
         btn_resta.setOnClickListener(this);
@@ -66,8 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        //6. Implementamos la operación que corresponda según el botón presionado
-        //3. obtenemos los valores que ingresa el usuario
+        // Implementamos la operación que corresponda según el botón presionado
+
+        // obtenemos los valores que ingresa el usuario
         obtenerinputs();
 
         switch (view.getId()){
